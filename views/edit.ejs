@@ -1,0 +1,95 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+      <div class="card shadow">
+        <div class="card-header">
+          <a href="/" class="btn btn-primary">Back</a>
+          <h1 class="text-center">Update Product</h1>
+        </div>
+        <div class="card-body">
+          <form
+            action="/update/<%= product.id %>"
+            enctype="multipart/form-data"
+            method="POST"
+          >
+            <label for="name">Product Name</label>
+            <input
+              class="form-control my-2"
+              type="text"
+              placeholder="Product Name"
+              name="name"
+              value="<%= product.name %>"
+            />
+
+            <label for="regularPrice">Regular Price</label>
+            <input
+              class="form-control my-2"
+              type="text"
+              placeholder="Regular Price"
+              name="regularPrice"
+              value="<%= product.regularPrice %>"
+            />
+            <label for="salePrice">Sale Price</label>
+            <input
+              class="form-control my-2"
+              type="text"
+              placeholder="Sale Price"
+              name="salePrice"
+              value="<%= product.salePrice %>"
+            />
+
+            <label for="stock">Product Stock</label>
+            <input
+              class="form-control my-2"
+              type="number"
+              placeholder="Product Stock"
+              name="stock"
+              value="<%= product.stock %>"
+            />
+
+            <label for="mobile">User Mobile</label>
+            <input
+              class="form-control mb-2"
+              type="text"
+              placeholder="User Mobile"
+              name="mobile"
+              value="<%= product.mobile %>"
+            />
+            <label for="email">User email</label>
+            <input
+              class="form-control mb-2"
+              type="text"
+              placeholder="User Mobile"
+              name="email"
+              value="<%= product.email %>"
+            />
+
+            <div class="text-center">
+              <img
+                style="height: 180px"
+                class="w-50 singleproductImage"
+                src="/productsImages/<%= product.photo %>"
+                alt=""
+              />
+            </div>
+            <input
+              class="form-control my-2"
+              type="file"
+              placeholder="Product Image"
+              name="productPhoto"
+              value="<%= product.photo %>"
+            />
+            <div class="mt-4">
+              <button class="btn btn-primary me-2" type="submit">
+                Update Product
+              </button>
+              <button class="btn btn-warning ms-2" type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
